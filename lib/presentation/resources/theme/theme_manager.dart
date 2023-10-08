@@ -4,26 +4,23 @@ import 'package:roomiz/presentation/resources/styles/colors/colors_manager.dart'
 import 'package:roomiz/presentation/resources/styles/fonts/fonts_manager.dart';
 import 'package:roomiz/presentation/resources/styles/text_styles/text_styles_manager.dart';
 
-class AppTheme{
-
+class AppTheme {
   static ThemeData get appTheme => ThemeData(
+        // ----------------------------------<main Colors>----------------------------------------
+        primaryColor: ColorsManager.kPrimaryColor,
+        primarySwatch: Colors.blueGrey,
+        scaffoldBackgroundColor: ColorsManager.kAppBackgroundColor,
+        unselectedWidgetColor: ColorsManager.kDarkYellowColor,
+        // ----------------------------------<appBar Theme>----------------------------------------
 
-    // ----------------------------------<main Colors>----------------------------------------
-    primaryColor: ColorsManager.kPrimaryColor,
-    scaffoldBackgroundColor: ColorsManager.kAppBackgroundColor,
-
-    // ----------------------------------<appBar Theme>----------------------------------------
-
-    appBarTheme: AppBarTheme(
-      color: ColorsManager.kAppBackgroundColor,
-      centerTitle: true,
-      elevation: AppConstants.zero,
-      titleTextStyle:
-      StylesManager.boldStyle(
-        fontColor: ColorsManager.kPrimaryColor,
-        fontSize: FontSizeManager.s22,
-      ),
-    ),
-  );
-
+        appBarTheme: AppBarTheme(
+          color: ColorsManager.kAppBackgroundColor,
+          centerTitle: true,
+          elevation: AppConstants.zero,
+          titleTextStyle: StylesManager.boldStyle(
+            fontColor: ColorsManager.kPrimaryColor,
+            fontSize: FontSizeManager.s22,
+          ),
+        ),
+      );
 }
